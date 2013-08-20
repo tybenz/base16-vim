@@ -150,7 +150,6 @@ call <SID>hi("Include",      s:gui0D, "", s:cterm0D, "", "")
 call <SID>hi("Keyword",      s:gui0E, "", s:cterm0E, "", "")
 call <SID>hi("Label",        s:gui0A, "", s:cterm0A, "", "")
 call <SID>hi("Number",       s:gui09, "", s:cterm09, "", "")
-call <SID>hi("Operator",     s:gui05, "", s:cterm05, "", "none")
 call <SID>hi("PreProc",      s:gui0A, "", s:cterm0A, "", "")
 call <SID>hi("Repeat",       s:gui0A, "", s:cterm0A, "", "")
 call <SID>hi("Special",      s:gui0C, "", s:cterm0C, "", "")
@@ -163,6 +162,12 @@ call <SID>hi("Tag",          s:gui0A, "", s:cterm0A, "", "")
 call <SID>hi("Todo",         s:gui0A, s:gui01, s:cterm0A, s:cterm01, "")
 call <SID>hi("Type",         s:gui09, "", s:cterm09, "", "none")
 call <SID>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "")
+
+if &background == "dark"
+  call <SID>hi("Operator",     s:gui05, "", s:cterm05, "", "none")
+else
+  call <SID>hi("Operator",     s:gui03, "", s:cterm03, "", "none")
+endif
 
 " Spelling Highlighting
 call <SID>hi("SpellBad",     s:gui05, s:gui00, s:cterm05, s:cterm08, "")
@@ -202,7 +207,11 @@ call <SID>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "")
 call <SID>hi("htmlTag",     s:gui05, "", s:cterm05, "", "")
 
 " CSS Highlighting
-call <SID>hi("cssBraces",      s:gui05, "", s:cterm05, "", "")
+if &background == "dark"
+  call <SID>hi("cssBraces",      s:gui05, "", s:cterm05, "", "")
+else
+  call <SID>hi("cssBraces",      s:gui03, "", s:cterm03, "", "")
+endif
 call <SID>hi("cssClassName",   s:gui0E, "", s:cterm0E, "", "")
 call <SID>hi("cssColor",       s:gui0C, "", s:cterm0C, "", "")
 
@@ -214,8 +223,13 @@ call <SID>hi("sassMixing",     s:gui0E, "", s:cterm0E, "", "")
 call <SID>hi("sassMixinName",  s:gui0D, "", s:cterm0D, "", "")
 
 " JavaScript Highlighting
-call <SID>hi("javaScript",        s:gui05, "", s:cterm05, "", "")
-call <SID>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "")
+if &background == "dark"
+  call <SID>hi("javaScript",        s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "")
+else
+  call <SID>hi("javaScript",        s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("javaScriptBraces",  s:gui03, "", s:cterm03, "", "")
+endif
 call <SID>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "")
 
 " Markdown Highlighting
