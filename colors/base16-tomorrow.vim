@@ -196,15 +196,26 @@ call <SID>hi("rubySymbol",                  s:gui0B, "", s:cterm0B, "", "")
 call <SID>hi("rubyStringDelimiter",         s:gui0B, "", s:cterm0B, "", "")
 
 " PHP Highlighting
-call <SID>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "")
-call <SID>hi("phpComparison",      s:gui05, "", s:cterm05, "", "")
-call <SID>hi("phpParent",          s:gui05, "", s:cterm05, "", "")
+if &background == "dark"
+  call <SID>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("phpComparison",      s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("phpParent",          s:gui05, "", s:cterm05, "", "")
+else
+  call <SID>hi("phpMemberSelector",  s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("phpComparison",      s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("phpParent",          s:gui03, "", s:cterm03, "", "")
+endif
 
 " HTML Highlighting
 call <SID>hi("htmlBold",    s:gui0A, "", s:cterm0A, "", "")
 call <SID>hi("htmlItalic",  s:gui0E, "", s:cterm0E, "", "")
-call <SID>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "")
-call <SID>hi("htmlTag",     s:gui05, "", s:cterm05, "", "")
+if &background == "dark"
+  call <SID>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("htmlTag",     s:gui05, "", s:cterm05, "", "")
+else
+  call <SID>hi("htmlEndTag",  s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("htmlTag",     s:gui03, "", s:cterm03, "", "")
+endif
 
 " CSS Highlighting
 if &background == "dark"
