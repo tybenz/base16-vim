@@ -120,7 +120,7 @@ else
   call <SID>hi("Normal",        s:gui02, s:gui07, s:cterm00, s:cterm05, "")
   call <SID>hi("LineNr",        s:gui07, s:gui0D, s:cterm07, s:cterm0D, "")
   call <SID>hi("SignColumn",    s:gui04, s:gui06, s:cterm04, s:cterm06, "")
-  call <SID>hi("SpecialKey",    s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
   call <SID>hi("StatusLine",    s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("StatusLineNC",  s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("VertSplit",     s:gui03, s:gui03, s:cterm03, s:cterm03, "none")
