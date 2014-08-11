@@ -114,25 +114,27 @@ if &background == "dark"
   call <SID>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
   call <SID>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
   call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
+  call <SID>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "")
 else
   call <SID>hi("Cursor",        s:gui00, s:gui02, s:cterm00, s:cterm02, "")
   call <SID>hi("NonText",       s:gui05, "", s:cterm05, "", "")
   call <SID>hi("Normal",        s:gui02, s:gui07, s:cterm00, s:cterm05, "")
-  call <SID>hi("LineNr",        s:gui05, s:gui0D, s:cterm05, s:cterm0D, "")
-  call <SID>hi("SignColumn",    s:gui04, s:gui06, s:cterm04, s:cterm06, "")
+  call <SID>hi("LineNr",        s:gui05, s:gui0D, s:cterm00, s:cterm05, "")
+  call <SID>hi("SignColumn",    s:gui04, s:gui06, s:cterm00, s:cterm05, "")
   call <SID>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
   call <SID>hi("StatusLine",    s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("StatusLineNC",  s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("VertSplit",     s:gui03, s:gui03, s:cterm03, s:cterm03, "none")
   call <SID>hi("ColorColumn",   "", s:gui06, "", s:cterm06, "none")
   call <SID>hi("CursorColumn",  "", s:gui06, "", s:cterm06, "none")
-  call <SID>hi("CursorLine",    "", s:gui06, "", s:cterm06, "none")
-  call <SID>hi("CursorLineNr",  s:gui04, s:gui06, s:cterm04, s:cterm06, "")
+  call <SID>hi("CursorLine",    "", s:gui06, "", s:cterm03, "none")
+  call <SID>hi("CursorLineNr",  s:gui04, s:gui06, s:cterm05, s:cterm00, "")
   call <SID>hi("PMenu",         s:gui05, s:gui03, s:cterm05, s:cterm03, "none")
   call <SID>hi("PMenuSel",      s:gui05, s:gui03, s:cterm05, s:cterm03, "reverse")
   call <SID>hi("TabLine",       s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
   call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
   call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "reverse")
+  call <SID>hi("Delimiter",    s:gui00, "", s:cterm00, "", "")
 endif
 
 " Standard Syntax Highlighting
@@ -142,7 +144,6 @@ call <SID>hi("Comment",      s:gui03, "", s:cterm07, "", "")
 call <SID>hi("Conditional",  s:gui0E, "", s:cterm0E, "", "")
 call <SID>hi("Constant",     s:gui09, "", s:cterm09, "", "")
 call <SID>hi("Define",       s:gui0E, "", s:cterm0E, "", "none")
-call <SID>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "")
 call <SID>hi("Float",        s:gui09, "", s:cterm09, "", "")
 call <SID>hi("Function",     s:gui0D, "", s:cterm0D, "", "")
 call <SID>hi("Identifier",   s:gui08, "", s:cterm08, "", "none")
@@ -166,7 +167,7 @@ call <SID>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "")
 if &background == "dark"
   call <SID>hi("Operator",     s:gui05, "", s:cterm05, "", "none")
 else
-  call <SID>hi("Operator",     s:gui03, "", s:cterm03, "", "none")
+  call <SID>hi("Operator",     s:gui00, "", s:cterm00, "", "none")
 endif
 
 " Spelling Highlighting
@@ -238,8 +239,8 @@ if &background == "dark"
   call <SID>hi("javaScript",        s:gui05, "", s:cterm05, "", "")
   call <SID>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "")
 else
-  call <SID>hi("javaScript",        s:gui03, "", s:cterm03, "", "")
-  call <SID>hi("javaScriptBraces",  s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("javaScript",        s:gui00, "", s:cterm00, "", "")
+  call <SID>hi("javaScriptBraces",  s:gui00, "", s:cterm00, "", "")
 endif
 call <SID>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "")
 
