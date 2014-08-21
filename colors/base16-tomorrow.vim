@@ -77,7 +77,6 @@ call <SID>hi("Directory",     s:gui0D, "", s:cterm0D, "", "")
 call <SID>hi("ErrorMsg",      s:gui08, s:gui00, s:cterm08, s:cterm00, "")
 call <SID>hi("Exception",     s:gui08, "", s:cterm08, "", "")
 call <SID>hi("FoldColumn",    "", s:gui01, "", s:cterm01, "")
-call <SID>hi("Folded",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
 call <SID>hi("IncSearch",        s:gui0A, s:gui01, s:cterm00, s:cterm0D,  "")
 call <SID>hi("Italic",        "", "", "", "", "none")
 call <SID>hi("Macro",         s:gui08, "", s:cterm08, "", "")
@@ -115,6 +114,7 @@ if &background == "dark"
   call <SID>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
   call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
   call <SID>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "")
+  call <SID>hi("Folded",        s:gui03, s:gui01, s:cterm05, s:cterm03, "")
 else
   call <SID>hi("Cursor",        s:gui00, s:gui02, s:cterm00, s:cterm02, "")
   call <SID>hi("NonText",       s:gui05, "", s:cterm05, "", "")
@@ -135,6 +135,7 @@ else
   call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
   call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "reverse")
   call <SID>hi("Delimiter",    s:gui00, "", s:cterm00, "", "")
+  call <SID>hi("Folded",        s:gui03, s:gui01, s:cterm00, s:cterm03, "")
 endif
 
 " Standard Syntax Highlighting
